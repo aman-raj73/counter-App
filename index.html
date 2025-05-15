@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+  <style>
+    .mydiv{
+        height: 50vh;
+        width: 50vh;
+        background: linear-gradient(#7F55B1,#9B7EBD);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        text-align: center;
+    }
+    button{
+        position: relative;
+        /* margin-top: 10px; */
+    }
+    #countElement{
+        font-size: 100px;
+    }
+    #increment{
+        height: 35px;
+        width: 20vh;
+        font-size: 20px;
+    }
+    #Deceremet{
+        height: 35px;
+        width: 20vh;
+        font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 140px;">
+        <h1>Counter App</h1>
+    </div>
+
+    <div class="mydiv">
+        <p style="color: white;" id="countElement">0</p>
+       <button id="increment" onclick="increment()">increment</button>
+       <button id="Deceremet" onclick="Deceremet()">Deceremet</button>
+
+    </div>
+    <script>
+        let count = 0;
+        function increment(){
+            count++;
+            document.getElementById('countElement').innerText = count;
+        }
+
+        function Deceremet(){
+            count--;
+            document.getElementById('countElement').innerText = count;
+        }
+       
+    </script>
+</body>
+</html>
